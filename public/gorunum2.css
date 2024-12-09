@@ -1,10 +1,12 @@
 .container {
-    padding: 150px;
+
 }
+
+
 
 .form-section {
     padding: 40px;
-    margin-left: 90px;
+    margin-left: 80px;
 }
 
 h2 {
@@ -29,7 +31,6 @@ label {
     font-size: 16px;
     margin-bottom: 5px;
 }
-
 
 input[type="text"],
 input[type="email"],

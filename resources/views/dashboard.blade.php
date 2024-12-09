@@ -1,1 +1,0 @@
-<h1>Hoşgeldiniz.</h1>

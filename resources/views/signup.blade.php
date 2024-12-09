@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaydol</title>
-    <script class="u-script" type="text/javascript" src="{{ asset('fotodegis.js') }}" defer=""></script>
-    <link rel="stylesheet" href="{{ asset('gorunum.css') }}">
-
-</head>
-<body>
-
+@extends('layouts.master')
+@section('content')
 <section>
     <div class="container">
         <div class="row justify-content-center">
@@ -18,10 +8,9 @@
                     <h2>Lütfen Bilgilerinizi Giriniz</h2>
                     <form action="{{ route('user.store') }}" method="POST">
                         @csrf
-
                         <div>
                             <label class="label-text" for="name">Adınız</label>
-                            <input type="text" id="name" name="name" placeholder="Adınızı giriniz." required  value="{{ old('name') }}">
+                            <input type="text" id="name" name="name" placeholder="Adınızı giriniz." required value="{{ old('name') }}">
                             @if($errors->has('name'))
                                 <div class="error">{{ $errors->first('name') }}</div>
                             @endif
@@ -65,6 +54,4 @@
     </div>
 </section>
 
-
-</body>
-</html>
+@endsection
